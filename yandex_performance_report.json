@@ -1,0 +1,99 @@
+{
+  "model_info": {
+    "device": "cuda",
+    "model_architecture": "TwoTowerPALModel",
+    "total_parameters": 7649,
+    "model_size_mb": 0.029178619384765625
+  },
+  "performance_metrics": {
+    "latency": {
+      "1": {
+        "mean_ms": 0.7648059987695888,
+        "std_ms": 0.2866578867247815,
+        "p95_ms": 1.2816549802664667,
+        "p99_ms": 1.5865010290872308,
+        "per_sample_ms": 0.7648059987695888
+      },
+      "8": {
+        "mean_ms": 0.36234000173863024,
+        "std_ms": 0.3570277148216485,
+        "p95_ms": 0.8453249727608636,
+        "p99_ms": 1.0413920087739945,
+        "per_sample_ms": 0.04529250021732878
+      },
+      "16": {
+        "mean_ms": 0.5502490018261597,
+        "std_ms": 0.3290478773109894,
+        "p95_ms": 1.1140650254674254,
+        "p99_ms": 1.2407059926772508,
+        "per_sample_ms": 0.03439056261413498
+      },
+      "32": {
+        "mean_ms": 0.6411620008293539,
+        "std_ms": 0.1489259236225019,
+        "p95_ms": 0.8846499811625108,
+        "p99_ms": 1.2161349999951203,
+        "per_sample_ms": 0.02003631252591731
+      },
+      "64": {
+        "mean_ms": 0.6267049972666427,
+        "std_ms": 0.2238003574958324,
+        "p95_ms": 0.9668350394349542,
+        "p99_ms": 1.2943390064174318,
+        "per_sample_ms": 0.009792265582291293
+      }
+    },
+    "memory": {
+      "1": {
+        "baseline_mb": 16.5166015625,
+        "peak_mb": 17.52099609375,
+        "additional_mb": 1.00439453125,
+        "per_sample_mb": 1.00439453125
+      },
+      "8": {
+        "baseline_mb": 16.51904296875,
+        "peak_mb": 17.529296875,
+        "additional_mb": 1.01025390625,
+        "per_sample_mb": 0.12628173828125
+      },
+      "16": {
+        "baseline_mb": 16.5224609375,
+        "peak_mb": 17.5400390625,
+        "additional_mb": 1.017578125,
+        "per_sample_mb": 0.0635986328125
+      },
+      "32": {
+        "baseline_mb": 16.5263671875,
+        "peak_mb": 17.56201171875,
+        "additional_mb": 1.03564453125,
+        "per_sample_mb": 0.0323638916015625
+      },
+      "64": {
+        "baseline_mb": 16.53466796875,
+        "peak_mb": 17.60595703125,
+        "additional_mb": 1.0712890625,
+        "per_sample_mb": 0.0167388916015625
+      }
+    },
+    "throughput": {
+      "duration_seconds": 10.000085592269897,
+      "total_samples": 428800,
+      "samples_per_second": 42879.63298348806,
+      "batches_per_second": 1339.9885307340019
+    }
+  },
+  "production_recommendations": {
+    "deployment_tier": "Light (suitable for real-time applications)",
+    "hardware_requirements": "CPU: 2-4 cores, RAM: 4GB, GPU: Not required",
+    "recommended_ram_gb": 4,
+    "estimated_max_qps": 1307,
+    "batch_size_recommendation": 64,
+    "scaling_notes": [
+      "Single query latency: 0.76ms",
+      "Peak memory usage: 17.6MB",
+      "Maximum throughput: 42880 queries/second",
+      "Model storage: 0.03MB"
+    ]
+  },
+  "timestamp": "2025-08-09 15:27:14"
+}
